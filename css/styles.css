@@ -411,16 +411,15 @@ a {
 }
 
 .hero {
+  max-width: 1440px;
+  margin: 0 auto;
   min-height: 800px;
-  border: 1px solid lime;
-}
-.hero__content {
   position: relative;
 }
 .hero__title {
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 47px;
   font-family: "Rasfire Regular", "Times", serif;
   color: #ffffff;
   font-size: 350px;
@@ -436,8 +435,9 @@ a {
   font-style: italic;
   margin: 0;
   transform: rotate(-90deg) translate(50%, -50%);
-  left: 0;
+  left: -25px;
   display: block;
+  line-height: 0.5;
 }
 .hero__image {
   position: absolute;

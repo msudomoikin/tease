@@ -1,15 +1,14 @@
 .hero {
+    max-width: 1440px;
+    margin: 0 auto;
     min-height: 800px;
-    border: 1px solid lime;
+    position: relative;
 
-    &__content {
-        position: relative;
-    }
 
     &__title {
         position: absolute;
         bottom: 0;
-        left: 0;
+        left: 47px;
         font-family: $ff-rasfire;
         color: $color-white;
         font-size: 350px;
@@ -26,8 +25,9 @@
         font-style: italic;
         margin: 0;
         transform: rotate(-90deg) translate(50%, -50%);
-        left: 0;
+        left: -25px;
         display: block;
+        line-height: 0.5;
     }
 
     &__image {
