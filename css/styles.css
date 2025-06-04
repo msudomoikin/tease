@@ -373,4 +373,76 @@ a {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 47px;
+}
+
+.header {
+  padding-top: 32px;
+  margin-bottom: 42px;
+}
+.header__content {
+  display: grid;
+  grid-template-columns: 1fr 100px 1fr;
+  gap: 20px;
+  align-items: center;
+}
+.header__nav-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  gap: 100px;
+  display: flex;
+}
+.header__nav-link {
+  font-size: 20px;
+}
+.header__logo {
+  flex-shrink: 0;
+  text-align: center;
+}
+.header__burger-button {
+  padding: 0;
+  border: 0;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: 0;
+  cursor: pointer;
+}
+
+.hero {
+  min-height: 800px;
+  border: 1px solid lime;
+}
+.hero__content {
+  position: relative;
+}
+.hero__title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-family: "Rasfire Regular", "Times", serif;
+  color: #ffffff;
+  font-size: 350px;
+  margin: 0;
+  line-height: 0.55;
+}
+.hero__subtitle {
+  position: absolute;
+  top: 50%;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  font-style: italic;
+  margin: 0;
+  transform: rotate(-90deg) translate(50%, -50%);
+  left: 0;
+  display: block;
+}
+.hero__image {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  font-weight: 400;
+  right: 0;
 }/*# sourceMappingURL=styles.css.map */

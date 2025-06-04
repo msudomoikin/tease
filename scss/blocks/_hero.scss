@@ -1,0 +1,40 @@
+.hero {
+    min-height: 800px;
+    border: 1px solid lime;
+
+    &__content {
+        position: relative;
+    }
+
+    &__title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-family: $ff-rasfire;
+        color: $color-white;
+        font-size: 350px;
+        margin: 0;
+        line-height: 0.55;
+    }
+
+    &__subtitle {
+        position: absolute;
+        top: 50%;
+        font-family: $ff-roboto;
+        font-size: 25px;
+        font-weight: 500;
+        font-style: italic;
+        margin: 0;
+        transform: rotate(-90deg) translate(50%, -50%);
+        left: 0;
+        display: block;
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        font-weight: 400;
+        right: 0;
+    }
+}
