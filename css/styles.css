@@ -372,7 +372,7 @@ a {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 47px;
+  padding: 0 45px;
 }
 
 .header {
@@ -415,6 +415,7 @@ a {
   margin: 0 auto;
   min-height: 800px;
   position: relative;
+  overflow: hidden;
 }
 .hero__title {
   position: absolute;
@@ -425,6 +426,7 @@ a {
   font-size: 350px;
   margin: 0;
   line-height: 0.55;
+  font-weight: 100;
 }
 .hero__subtitle {
   position: absolute;
@@ -445,4 +447,45 @@ a {
   z-index: 2;
   font-weight: 400;
   right: 0;
+  transition: transform 5.3s ease-in-out;
+}
+.hero__image:hover {
+  transform: rotate(360deg);
+}
+
+.intro {
+  padding-top: 124px;
+}
+.intro__image {
+  z-index: 1;
+}
+.intro__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.intro__content {
+  max-width: 665px;
+}
+.intro__title {
+  margin: 0 0 91px;
+  font-size: 85px;
+  font-family: "Rasfire Regular", "Times", serif;
+  color: #ffffff;
+  font-weight: 100;
+}
+.intro__title span:first-child {
+  position: relative;
+  left: -436px;
+}
+.intro__text {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: -0.02em;
+  display: block;
+}
+.intro__text:first-of-type {
+  margin-bottom: 25px;
 }/*# sourceMappingURL=styles.css.map */
