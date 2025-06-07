@@ -22,6 +22,10 @@
         color: $color-white;
         font-weight: 100;
 
+        span {
+            display: block;
+        }
+
         span:first-child {
             position: relative;
             left: -436px;

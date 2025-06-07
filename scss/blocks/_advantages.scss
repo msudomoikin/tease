@@ -1,0 +1,65 @@
+.advantages {
+    position: relative;
+    padding-top: 205px;
+    overflow: hidden;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 48px;
+        font-family: $ff-rasfire;
+        color: $color-white;
+        font-weight: 100;
+    }
+
+    &__list {
+        position: relative;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        min-width: 664px;
+        column-gap: 20px;
+        flex-direction: column;
+        row-gap: 124px;
+    }
+
+    &__item {
+        position: relative;
+
+        counter-increment: step-counter;
+        width: 322px;
+
+        &:nth-child(odd) {
+            align-self: flex-end;
+        }
+
+        //list marker
+        &::before {
+            font-family: $ff-volkorn;
+            position: absolute;
+            content: counter(step-counter, decimal-leading-zero);
+            font-size: 30px;
+            line-height: 22px;
+            letter-spacing: 0.01em;
+        }
+
+        &:nth-child(4) {
+            position: relative;
+            left: -40%;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        bottom: -60px;
+        right: 600px;
+        z-index: 1;
+    }
+}

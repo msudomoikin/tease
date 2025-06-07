@@ -338,6 +338,13 @@ template {
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Vollkorn SC";
+  src: local("Vollkorn SC Regular"), local("VollkornSC-Regular"), url("../fonts/VollkornSC-Regular.woff2") format("woff2"), url("../fonts/VollkornSC-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 *,
 *::after,
 *::before {
@@ -474,6 +481,9 @@ a {
   color: #ffffff;
   font-weight: 100;
 }
+.intro__title span {
+  display: block;
+}
 .intro__title span:first-child {
   position: relative;
   left: -436px;
@@ -488,4 +498,87 @@ a {
 }
 .intro__text:first-of-type {
   margin-bottom: 25px;
+}
+
+.advantages {
+  position: relative;
+  padding-top: 205px;
+  overflow: hidden;
+}
+.advantages__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+.advantages__title {
+  margin: 0;
+  font-size: 48px;
+  font-family: "Rasfire Regular", "Times", serif;
+  color: #ffffff;
+  font-weight: 100;
+}
+.advantages__list {
+  position: relative;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  min-width: 664px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  flex-direction: column;
+  row-gap: 124px;
+}
+.advantages__item {
+  position: relative;
+  counter-increment: step-counter;
+  width: 322px;
+}
+.advantages__item:nth-child(odd) {
+  align-self: flex-end;
+}
+.advantages__item::before {
+  font-family: "Vollkorn SC", "Times", serif;
+  position: absolute;
+  content: counter(step-counter, decimal-leading-zero);
+  font-size: 30px;
+  line-height: 22px;
+  letter-spacing: 0.01em;
+}
+.advantages__item:nth-child(4) {
+  position: relative;
+  left: -40%;
+}
+.advantages__image {
+  position: absolute;
+  bottom: -60px;
+  right: 600px;
+  z-index: 1;
+}
+
+.advantage {
+  padding-top: 32px;
+}
+.advantage__title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.01em;
+}
+.advantage__title span {
+  display: block;
+}
+.advantage__text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.01em;
+}
+
+.collection {
+  padding-top: 175px;
 }/*# sourceMappingURL=styles.css.map */
