@@ -42,6 +42,8 @@
     }
 
     &__left {
+        display: flex;
+        flex-direction: column;
         width: 571px;
     }
 
