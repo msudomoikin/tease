@@ -1,0 +1,53 @@
+.collection-vibe {
+    &__title {
+        padding-top: 656px;
+        padding-bottom: 95px;
+        font-family: $ff-rasfire;
+        color: $color-white;
+        font-size: 48px;
+        font-weight: 100;
+        margin: 0;
+        line-height: 0.8;
+
+        & span {
+            display: block;
+        }
+    }
+
+    &__subtitle {
+        position: absolute;
+        top: 50%;
+        font-family: $ff-roboto;
+        font-size: 25px;
+        font-weight: 500;
+        font-style: italic;
+        margin: 0;
+        transform: rotate(-90deg) translate(50%, -50%);
+        left: -155px;
+        display: block;
+        line-height: 0.5;
+    }
+
+    &__wrapper {
+        justify-content: space-between;
+        position: relative;
+        gap: 20px;
+        display: flex;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 665px;
+        justify-content: flex-end;
+    }
+
+    &__image {
+        margin-bottom: 80px;
+    }
+
+    &__text {
+        margin: 0;
+    }
+}
