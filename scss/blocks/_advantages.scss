@@ -3,11 +3,27 @@
     padding-top: 205px;
     overflow: hidden;
 
+
     &__wrapper {
         display: flex;
+        position: relative;
         justify-content: space-between;
         align-items: flex-start;
         gap: 20px;
+    }
+
+    &__subtitle {
+        position: absolute;
+        top: 717px;
+        font-family: $ff-roboto;
+        font-size: 25px;
+        font-weight: 500;
+        font-style: italic;
+        margin: 0;
+        transform: rotate(-90deg) translate(50%, -50%);
+        left: -150px;
+        display: block;
+        line-height: 0.5;
     }
 
     &__title {
