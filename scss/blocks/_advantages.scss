@@ -13,7 +13,7 @@
     }
 
     &__subtitle {
-        top: 717px;
+        top: 72%;
     }
 
     &__title {
@@ -22,6 +22,10 @@
         font-family: $ff-rasfire;
         color: $color-white;
         font-weight: 100;
+
+        & span {
+            display: block;
+        }
     }
 
     &__list {
@@ -69,7 +73,8 @@
     &__image {
         position: absolute;
         bottom: -56px;
-        right: 372px;
+        right: 313px;
         z-index: 1;
+        width: 557px;
     }
 }

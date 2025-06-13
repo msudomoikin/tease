@@ -19,7 +19,7 @@
     }
 
     &__subtitle {
-        top: 50%;
+        top: 54%;
     }
 
     &__image {
@@ -29,9 +29,5 @@
         font-weight: 400;
         right: 0;
         transition: transform 5.3s ease-in-out;
-
-        &:hover {
-            // transform: rotate(360deg);
-        }
     }
 }

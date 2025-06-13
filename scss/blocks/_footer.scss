@@ -1,6 +1,10 @@
 .footer {
-    padding-top: 107px;
+    padding-top: 104px;
     padding-bottom: 19px;
+
+    &__nav {
+        padding-top: 10px;
+    }
 
     &__content {
         display: grid;
@@ -16,11 +20,15 @@
     }
 
     &__links-list {
-        padding: 0;
+        padding: 9px;
         margin: 0;
         gap: 14px;
         list-style-type: none;
         display: flex;
         flex-direction: column;
+    }
+
+    &__link {
+        font-size: 19px;
     }
 }
