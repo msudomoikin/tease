@@ -1,7 +1,15 @@
 $color-hidden-creek: #d5dae0;
 $color-blue-planet: #555D68;
-$color-white: #ffffff; 
+$color-white: #ffffff;
 
 $ff-rasfire: "Rasfire Regular", "Times", serif;
 $ff-roboto: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $ff-volkorn: "Vollkorn SC", "Times", serif;
+
+
+// Viewport
+$vp-tablet: 1023px;
+$vp-mobile: 767px;
+
+// Animation
+$transition-300: ease-in 0.3s;
