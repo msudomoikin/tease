@@ -1,12 +1,15 @@
 .hero {
-    min-height: 832px;
-    position: relative;
     overflow: hidden;
+
+    &__wrapper {
+        min-height: 832px;
+        position: relative;
+    }
 
     &__title {
         position: absolute;
         bottom: 0;
-        left: 47px;
+        left: 0;
         font-family: $ff-rasfire;
         color: $color-white;
         font-size: 350px;
