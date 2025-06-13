@@ -382,6 +382,17 @@ a {
   padding: 0 45px;
 }
 
+.nav__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  gap: 100px;
+  display: flex;
+}
+.nav__link {
+  font-size: 20px;
+}
+
 .side-title {
   position: absolute;
   top: 50%;
@@ -473,16 +484,6 @@ a {
   gap: 20px;
   align-items: center;
 }
-.header__nav-list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  gap: 100px;
-  display: flex;
-}
-.header__nav-link {
-  font-size: 20px;
-}
 .header__logo {
   flex-shrink: 0;
   text-align: center;
@@ -499,14 +500,16 @@ a {
 }
 
 .hero {
+  overflow: hidden;
+}
+.hero__wrapper {
   min-height: 832px;
   position: relative;
-  overflow: hidden;
 }
 .hero__title {
   position: absolute;
   bottom: 0;
-  left: 47px;
+  left: 0;
   font-family: "Rasfire Regular", "Times", serif;
   color: #ffffff;
   font-size: 350px;
@@ -775,4 +778,28 @@ a {
 }
 .details__image-detail-wrapper {
   display: flex;
+}
+
+.footer {
+  padding-top: 107px;
+  padding-bottom: 19px;
+}
+.footer__content {
+  display: grid;
+  grid-template-columns: 1fr 100px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+.footer__links-wrapper {
+  justify-content: flex-end;
+  display: flex;
+  gap: 104px;
+}
+.footer__links-list {
+  padding: 0;
+  margin: 0;
+  gap: 14px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=styles.css.map */
