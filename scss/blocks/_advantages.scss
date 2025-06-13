@@ -13,17 +13,7 @@
     }
 
     &__subtitle {
-        position: absolute;
         top: 717px;
-        font-family: $ff-roboto;
-        font-size: 25px;
-        font-weight: 500;
-        font-style: italic;
-        margin: 0;
-        transform: rotate(-90deg) translate(50%, -50%);
-        left: -150px;
-        display: block;
-        line-height: 0.5;
     }
 
     &__title {
@@ -43,12 +33,11 @@
         min-width: 664px;
         column-gap: 20px;
         flex-direction: column;
-        row-gap: 124px;
     }
 
     &__item {
         position: relative;
-
+        margin-bottom: 124px;
         counter-increment: step-counter;
         width: 322px;
 
@@ -66,16 +55,21 @@
             letter-spacing: 0.01em;
         }
 
+        &:nth-child(3) {
+            margin-bottom: 184px;
+        }
+
         &:nth-child(4) {
+            margin-bottom: 0;
             position: relative;
-            left: -40%;
+            left: -52%;
         }
     }
 
     &__image {
         position: absolute;
-        bottom: -60px;
-        right: 394px;
+        bottom: -56px;
+        right: 372px;
         z-index: 1;
     }
 }

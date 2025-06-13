@@ -1,0 +1,18 @@
+.side-title {
+    position: absolute;
+    top: 50%;
+    font-family: $ff-roboto;
+    font-size: 22px;
+    font-weight: 500;
+    font-style: italic;
+    margin: 0;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    display: block;
+
+    &--right {
+        transform-origin: bottom right;
+        left: unset;
+        right: 0;
+    }
+}

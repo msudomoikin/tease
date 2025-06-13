@@ -1,5 +1,6 @@
 .collection {
     padding-top: 175px;
+    overflow: hidden;
 
     &__title {
         font-family: $ff-rasfire;
@@ -21,17 +22,7 @@
     }
 
     &__subtitle {
-        position: absolute;
         top: 273px;
-        font-family: $ff-roboto;
-        font-size: 25px;
-        font-weight: 500;
-        font-style: italic;
-        margin: 0;
-        transform: rotate(-90deg) translate(50%, -50%);
-        right: -68px;
-        display: block;
-        line-height: 0.5;
     }
 
     &__wrapper {
@@ -44,14 +35,14 @@
     &__left {
         display: flex;
         flex-direction: column;
-        width: 571px;
+        max-width: 571px;
     }
 
     &__right {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        width: 665px;
+        max-width: 665px;
     }
 
     &__text {
@@ -69,7 +60,7 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        width: 824px;
+        max-width: 824px;
         height: auto;
         z-index: -1;
     }
