@@ -4,11 +4,14 @@
 @import "global/_reboot";
 @import "global/_container";
 
+@import "blocks/_side-title";
+@import "blocks/_read-more";
+@import "blocks/_advantage";
+@import "blocks/_detail";
 @import "blocks/_header";
 @import "blocks/_hero";
 @import "blocks/_intro";
 @import "blocks/_advantages";
-@import "blocks/_advantage";
-@import "blocks/collection";
-@import "blocks/read-more";
-@import "blocks/collection-vibe";
+@import "blocks/_collection";
+@import "blocks/_collection-vibe";
+@import "blocks/_details"
