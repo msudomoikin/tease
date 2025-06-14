@@ -3,6 +3,9 @@
     padding-top: 205px;
     overflow: hidden;
 
+    @include vp-767 {
+        padding-top: 105px;
+    }
 
     &__wrapper {
         display: flex;
@@ -10,10 +13,18 @@
         justify-content: space-between;
         align-items: flex-start;
         gap: 20px;
+
+        @include vp-767 {
+            flex-wrap: wrap;
+        }
     }
 
     &__subtitle {
         top: 72%;
+
+        @include vp-767 {
+            display: none;
+        }
     }
 
     &__title {
@@ -37,16 +48,29 @@
         min-width: 664px;
         column-gap: 20px;
         flex-direction: column;
+
+        @include vp-767 {
+            min-width: unset;
+            width: 100%;
+        }
     }
 
     &__item {
         position: relative;
         margin-bottom: 124px;
         counter-increment: step-counter;
-        width: 322px;
+        max-width: 322px;
+
+        @include vp-767 {
+            margin-bottom: 24px;
+        }
 
         &:nth-child(odd) {
             align-self: flex-end;
+
+            @include vp-767 {
+                align-self: flex-start;
+            }
         }
 
         //list marker
@@ -61,12 +85,20 @@
 
         &:nth-child(3) {
             margin-bottom: 184px;
+
+            @include vp-767 {
+                margin-bottom: 24px;
+            }
         }
 
         &:nth-child(4) {
             margin-bottom: 0;
             position: relative;
             left: -52%;
+
+            @include vp-767 {
+                left: 0;
+            }
         }
     }
 
@@ -76,5 +108,9 @@
         right: 279px;
         z-index: 1;
         width: 557px;
+
+        @include vp-767 {
+            display: none;
+        }
     }
 }

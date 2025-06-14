@@ -23,11 +23,24 @@
             margin-top: -17px;
             position: relative;
             left: 192px;
+
+            @include vp-767 {
+                left: 0;
+            }
+        }
+
+        @include vp-767 {
+            font-size: 65px;
+            margin-bottom: 62px;
         }
     }
 
     &__subtitle {
         top: 9%;
+
+        @include vp-767 {
+            display: none;
+        }
     }
 
     &__list {
@@ -38,6 +51,11 @@
         display: grid;
         grid-template-columns: 779px 1fr;
         column-gap: 114px;
+
+        @include vp-767 {
+            grid-template-columns: 1fr;
+            gap: 57px;
+        }
     }
 
     &__item {
@@ -61,8 +79,11 @@
         }
     }
 
-
     &__image-detail-wrapper {
         display: flex;
+
+        @include vp-767 {
+            flex-wrap: wrap;
+        }
     }
 }

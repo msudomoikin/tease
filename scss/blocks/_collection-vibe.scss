@@ -8,13 +8,23 @@
         font-weight: 100;
         margin: 0;
 
+        @include vp-767 {
+            padding-top: 56px;
+            padding-bottom: 45px;
+        }
+
         & span {
             display: block;
         }
+        
     }
 
     &__subtitle {
         top: 49%;
+
+        @include vp-767 {
+            display: none;
+        }
     }
 
     &__wrapper {
@@ -22,6 +32,10 @@
         position: relative;
         gap: 20px;
         display: flex;
+
+        @include vp-767 {
+            flex-wrap: wrap;
+        }
     }
 
     &__right {
@@ -34,9 +48,19 @@
     &__image {
         padding-top: 180px;
         margin-bottom: 60px;
+
+        @include vp-767 {
+            padding-top: 0;
+            margin-bottom: 0;
+            position: absolute;
+            z-index: -1;
+            opacity: 0.3;
+            top: 500px;
+        }
     }
 
     &__text {
+        margin: 0;
         font-weight: 400;
         font-size: 18px;
         line-height: 25px;

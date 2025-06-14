@@ -2,6 +2,10 @@
     padding-top: 175px;
     overflow: hidden;
 
+    @include vp-767 {
+        padding-top: 75px;
+    }
+
     &__title {
         font-family: $ff-rasfire;
         color: $color-white;
@@ -11,6 +15,10 @@
         line-height: 0.8;
         font-weight: 100;
 
+        @include vp-767 {
+            padding: 46px 0 46px 0;
+        } 
+
         & span {
             display: block;
         }
@@ -18,11 +26,19 @@
         & span:last-child {
             position: relative;
             left: 240px;
+
+            @include vp-767 {
+                left: 0;
+            }
         }
     }
 
     &__subtitle {
         top: 17%;
+
+        @include vp-767 {
+            display: none;
+        }
     }
 
     &__wrapper {
@@ -30,6 +46,12 @@
         display: flex;
         justify-content: space-between;
         position: relative;
+
+        @include vp-767 {
+            flex-wrap: wrap;
+            gap: 0;
+            flex-direction: column-reverse;
+        }
     }
 
     &__left {
@@ -52,7 +74,11 @@
         letter-spacing: -0.02em;
 
         &--pt{
-            padding-top: 10px;;
+            padding-top: 10px;
+            @include vp-767 {
+                padding-top: 22px;
+                padding-bottom: 22px;
+            }
         }
 
         &--mb{
@@ -67,5 +93,9 @@
         max-width: 824px;
         height: auto;
         z-index: -1;
+
+        @include vp-767 {
+            opacity: 0.3;
+        }
     }
 }

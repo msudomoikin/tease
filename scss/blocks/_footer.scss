@@ -11,12 +11,30 @@
         grid-template-columns: 1fr 100px 1fr;
         gap: 20px;
         align-items: start;
+
+        @include vp-767 {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     &__links-wrapper {
         justify-content: flex-end;
         display: flex;
         gap: 104px;
+
+        @include vp-767 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+            text-align: center;
+        }
     }
 
     &__links-list {
@@ -26,9 +44,22 @@
         list-style-type: none;
         display: flex;
         flex-direction: column;
+
+        @include vp-767 {
+            padding: 0;
+        }
     }
 
     &__link {
         font-size: 19px;
+    }
+
+    & .nav__list {
+        @include vp-767 {
+            gap: 14px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 }
