@@ -48,14 +48,14 @@
     &__image {
         padding-top: 180px;
         margin-bottom: 75px;
-
+        
         @include vp-767 {
             padding-top: 0;
             margin-bottom: 0;
             position: absolute;
             z-index: -1;
             opacity: 0.3;
-            top: 500px;
+            top: 200px;
         }
     }
 

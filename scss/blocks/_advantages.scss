@@ -1,6 +1,6 @@
 .advantages {
     position: relative;
-    padding-top: 205px;
+    padding-top: 196px;
 
     @include vp-767 {
         padding-top: 105px;
@@ -15,20 +15,21 @@
 
         @media screen and (max-width: 1406px) {
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: flex-end;
         }
     }
 
     &__subtitle {
         top: 73%;
 
-        @include vp-767 {
+        @media screen and (max-width: 804px) {
             display: none;
         }
     }
 
     &__title {
         margin: 0;
+        margin-right: auto;
         font-size: 48px;
         font-family: $ff-rasfire;
         color: $color-white;
@@ -65,11 +66,15 @@
             margin-bottom: 24px;
         }
 
+        @media screen and (max-width: 560px) {
+            align-self: center;
+        }
+
         &:nth-child(odd) {
             align-self: flex-end;
 
-            @include vp-767 {
-                align-self: flex-start;
+            @media screen and (max-width: 560px) {
+                align-self: center;
             }
         }
 
@@ -109,8 +114,9 @@
         z-index: 1;
         width: 588px;
 
-        @media screen and (max-width: 1406px)  {
+        @media screen and (max-width: 1406px) {
             z-index: -1;
+            opacity: 0.3;
         }
     }
 }

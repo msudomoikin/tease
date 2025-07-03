@@ -31,12 +31,17 @@
         }
 
         @include vp-767 {
+            font-size: 240px;
+        }
+
+        @media screen and (max-width: 600px) {
             font-size: 130px;
         }
 
-        @media screen and (min-width: 450px) {
-            font-size: 180px;
+        @media screen and (max-width: 360px) {
+            font-size: 100px;
         }
+
     }
 
     &__subtitle {

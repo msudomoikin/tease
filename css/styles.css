@@ -555,12 +555,17 @@ a {
 }
 @media (max-width: 767px) {
   .hero__title {
+    font-size: 240px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .hero__title {
     font-size: 130px;
   }
 }
-@media screen and (min-width: 450px) {
+@media screen and (max-width: 360px) {
   .hero__title {
-    font-size: 180px;
+    font-size: 100px;
   }
 }
 .hero__subtitle {
@@ -587,8 +592,17 @@ a {
 .intro {
   padding-top: 124px;
 }
-.intro__image {
-  z-index: 1;
+.intro__image-block {
+  width: 434px;
+  height: 535px;
+  background: url("../../images/img2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 1022px) {
+  .intro__image-block {
+    display: none;
+  }
 }
 .intro__wrapper {
   display: flex;
@@ -613,8 +627,13 @@ a {
 }
 @media (max-width: 767px) {
   .intro__title {
-    font-size: 45px;
+    font-size: 85px;
     margin: 0 0 50px;
+  }
+}
+@media screen and (max-width: 616px) {
+  .intro__title {
+    font-size: 70px;
   }
 }
 .intro__title span {
@@ -625,7 +644,7 @@ a {
   left: -436px;
   top: 8px;
 }
-@media (max-width: 1023px) {
+@media screen and (max-width: 1168px) {
   .intro__title span:first-child {
     left: 0;
   }
@@ -644,7 +663,7 @@ a {
 
 .advantages {
   position: relative;
-  padding-top: 205px;
+  padding-top: 196px;
 }
 @media (max-width: 767px) {
   .advantages {
@@ -661,19 +680,20 @@ a {
 @media screen and (max-width: 1406px) {
   .advantages__wrapper {
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-end;
   }
 }
 .advantages__subtitle {
   top: 73%;
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 804px) {
   .advantages__subtitle {
     display: none;
   }
 }
 .advantages__title {
   margin: 0;
+  margin-right: auto;
   font-size: 48px;
   font-family: "Rasfire Regular", "Times", serif;
   color: #ffffff;
@@ -710,12 +730,17 @@ a {
     margin-bottom: 24px;
   }
 }
+@media screen and (max-width: 560px) {
+  .advantages__item {
+    align-self: center;
+  }
+}
 .advantages__item:nth-child(odd) {
   align-self: flex-end;
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 560px) {
   .advantages__item:nth-child(odd) {
-    align-self: flex-start;
+    align-self: center;
   }
 }
 .advantages__item::before {
@@ -754,6 +779,7 @@ a {
 @media screen and (max-width: 1406px) {
   .advantages__image {
     z-index: -1;
+    opacity: 0.3;
   }
 }
 
@@ -763,7 +789,7 @@ a {
 }
 @media (max-width: 767px) {
   .collection {
-    padding-top: 75px;
+    padding-top: 105px;
   }
 }
 .collection__title {
@@ -771,14 +797,9 @@ a {
   color: #ffffff;
   font-size: 85px;
   margin: 0;
-  padding: 252px 0 245px 0;
+  padding: 259px 0 245px 0;
   line-height: 0.8;
   font-weight: 100;
-}
-@media (max-width: 767px) {
-  .collection__title {
-    padding: 46px 0 46px 0;
-  }
 }
 .collection__title span {
   display: block;
@@ -787,9 +808,20 @@ a {
   position: relative;
   left: 240px;
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 1144px) {
   .collection__title span:last-child {
     left: 0;
+  }
+}
+@media screen and (max-width: 1251px) {
+  .collection__title {
+    padding: 0 0 122px 0;
+  }
+}
+@media (max-width: 767px) {
+  .collection__title {
+    padding: 46px 0 46px 0;
+    font-size: 70px;
   }
 }
 .collection__subtitle {
@@ -806,7 +838,7 @@ a {
   justify-content: space-between;
   position: relative;
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 1251px) {
   .collection__wrapper {
     flex-wrap: wrap;
     gap: 0;
@@ -818,11 +850,31 @@ a {
   flex-direction: column;
   max-width: 571px;
 }
+@media screen and (max-width: 1251px) {
+  .collection__left {
+    max-width: 80%;
+  }
+}
+@media (max-width: 767px) {
+  .collection__left {
+    max-width: 100%;
+  }
+}
 .collection__right {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   max-width: 665px;
+}
+@media screen and (max-width: 1251px) {
+  .collection__right {
+    max-width: 80%;
+  }
+}
+@media (max-width: 767px) {
+  .collection__right {
+    max-width: 100%;
+  }
 }
 .collection__text {
   margin: 0;
@@ -833,7 +885,7 @@ a {
 .collection__text--pt {
   padding-top: 14px;
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 1251px) {
   .collection__text--pt {
     padding-top: 22px;
     padding-bottom: 22px;
@@ -850,7 +902,7 @@ a {
   height: auto;
   z-index: -1;
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 1251px) {
   .collection__image {
     opacity: 0.3;
   }
@@ -910,7 +962,7 @@ a {
     position: absolute;
     z-index: -1;
     opacity: 0.3;
-    top: 500px;
+    top: 200px;
   }
 }
 .collection-vibe__text {

@@ -1,8 +1,17 @@
 .intro {
     padding-top: 124px;
 
-    &__image {
-        z-index: 1;
+
+    &__image-block {
+        width: 434px;
+        height: 535px;
+        background: url("../../images/img2.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @media screen and (max-width: 1022px) {
+            display: none;
+        }
     }
 
     &__wrapper {
@@ -29,8 +38,12 @@
 
 
         @include vp-767 {
-            font-size: 45px;
+            font-size: 85px;
             margin: 0 0 50px;
+        }
+
+        @media screen and (max-width: 616px) {
+            font-size: 70px;
         }
 
         span {
@@ -42,7 +55,7 @@
             left: -436px;
             top: 8px;
 
-            @include vp-1023 {
+            @media screen and (max-width:1168px) {
                 left: 0;
             }
         }
