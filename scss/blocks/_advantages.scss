@@ -1,7 +1,6 @@
 .advantages {
     position: relative;
     padding-top: 205px;
-    overflow: hidden;
 
     @include vp-767 {
         padding-top: 105px;
@@ -14,8 +13,9 @@
         align-items: flex-start;
         gap: 20px;
 
-        @include vp-1023 {
+        @media screen and (max-width: 1406px) {
             flex-wrap: wrap;
+            justify-content: center;
         }
     }
 
@@ -96,7 +96,7 @@
             position: relative;
             left: -52%;
 
-            @include vp-767 {
+            @media screen and (max-width: 1406px) {
                 left: 0;
             }
         }
@@ -109,8 +109,8 @@
         z-index: 1;
         width: 588px;
 
-        @include vp-767 {
-            display: none;
+        @media screen and (max-width: 1406px)  {
+            z-index: -1;
         }
     }
 }

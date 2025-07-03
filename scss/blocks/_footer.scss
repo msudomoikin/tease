@@ -51,6 +51,10 @@
 
         &:last-child {
             padding-right: 17px;
+
+            @include vp-1023 {
+                padding-right: 0;
+            }
         }
 
         @include vp-767 {

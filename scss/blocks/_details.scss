@@ -52,7 +52,7 @@
         grid-template-columns: 779px 1fr;
         column-gap: 114px;
 
-        @include vp-1023 {
+        @media screen and (max-width: 1287px) {
             grid-template-columns: 1fr 1fr;
         }
 
@@ -86,7 +86,7 @@
     &__image-detail-wrapper {
         display: flex;
 
-        @include vp-1023 {
+        @media screen and (max-width:1317px) {
             flex-wrap: wrap;
         }
     }
