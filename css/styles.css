@@ -1039,11 +1039,6 @@ a {
   padding-bottom: 106px;
   overflow: hidden;
 }
-@media (max-width: 1023px) {
-  .details {
-    margin-bottom: 160px;
-  }
-}
 .details__wrapper {
   position: relative;
 }

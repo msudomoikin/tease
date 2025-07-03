@@ -3,10 +3,6 @@
     padding-bottom: 106px;
     overflow: hidden;
 
-    @include vp-1023 {
-        margin-bottom: 160px;
-    }
-
     &__wrapper {
         position: relative;
     }
