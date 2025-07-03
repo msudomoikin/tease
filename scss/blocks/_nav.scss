@@ -9,5 +9,11 @@
 
     &__link {
         font-size: 20px;
+        transition: color $transition-300;
+
+        &:hover {
+            color: $color-atom-blue;
+        }
     }
+
 }

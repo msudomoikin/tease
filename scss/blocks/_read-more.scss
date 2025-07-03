@@ -3,6 +3,11 @@
     margin-top: auto;
     margin-bottom: 0;
     width: max-content;
+    transition: color $transition-300;
+
+    & svg {
+        transition: transform $transition-300;
+    }
 
     &__wrapper {
         display: flex;
@@ -15,5 +20,12 @@
         font-size: 18px;
         line-height: 22px;
         letter-spacing: -0.02em;
+    }
+
+    &:hover {
+        svg {
+            transform: translate(10%, -10%);
+        }
+        color: $color-atom-blue;
     }
 }

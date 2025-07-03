@@ -64,6 +64,11 @@
 
     &__link {
         font-size: 19px;
+        transition: color $transition-300;
+
+        &:hover {
+            color: $color-atom-blue;
+        }
     }
 
     & .nav__list {
