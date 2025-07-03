@@ -10,6 +10,7 @@
     transform-origin: top left;
     display: block;
     left: 0;
+    pointer-events: none;
 
     &--right {
         transform-origin: bottom right;
