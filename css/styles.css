@@ -820,6 +820,12 @@ a {
     opacity: 0.3;
   }
 }
+@media screen and (max-width: 560px) {
+  .advantages__image {
+    right: 0;
+    bottom: 0;
+  }
+}
 
 .collection {
   padding-top: 175px;
@@ -827,7 +833,7 @@ a {
 }
 @media (max-width: 767px) {
   .collection {
-    padding-top: 105px;
+    padding-top: 128px;
   }
 }
 .collection__title {

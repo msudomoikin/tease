@@ -70,7 +70,7 @@
             margin-bottom: 24px;
         }
 
-        
+
 
         @media screen and (max-width: 560px) {
             align-self: center;
@@ -120,11 +120,17 @@
         z-index: 1;
         width: 588px;
         user-select: none;
-        pointer-events: none;;
+        pointer-events: none;
+        ;
 
         @media screen and (max-width: 1406px) {
             z-index: -1;
             opacity: 0.3;
+        }
+
+        @media screen and (max-width: 560px) {
+            right: 0;
+            bottom: 0;
         }
     }
 }
