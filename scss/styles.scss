@@ -1,3 +1,4 @@
+@import "global/_utils";
 @import "global/_mixins";
 @import "global/_normalize";
 @import "global/_fonts";
@@ -5,6 +6,7 @@
 @import "global/_reboot";
 @import "global/_container";
 
+@import "blocks/_preloader";
 @import "blocks/_nav";
 @import "blocks/_side-title";
 @import "blocks/_read-more";

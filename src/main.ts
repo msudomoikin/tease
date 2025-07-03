@@ -1,24 +1,11 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+import { initHeroImageDisplacement } from "./heroImageDisplacement";
+import { iosVhFix } from "./utils/ios-vh-fix.js"
+import { ScrollLock } from "./utils/scroll-lock.js";
+import { initPreloader } from "./modules/preloader.ts";
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
-
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+window.addEventListener('DOMContentLoaded', async () => {
+    await initHeroImageDisplacement();
+    (window as any).scrollLock = new ScrollLock();
+    initPreloader()
+    iosVhFix();
+})

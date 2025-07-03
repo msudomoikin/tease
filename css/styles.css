@@ -1,3 +1,20 @@
+.scroll-lock-ios {
+  position: fixed;
+  overflow: hidden;
+}
+
+.scroll-lock {
+  overflow: hidden;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
   ========================================================================== */
@@ -391,6 +408,81 @@ a {
   }
 }
 
+.preloader {
+  position: fixed;
+  inset: 0;
+  background-color: #d5dae0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s ease-out;
+}
+.preloader.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.preloader.is-loading {
+  display: flex;
+}
+.preloader__wrapper {
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.preloader__image {
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  animation: shine 1.5s ease-out infinite;
+}
+.preloader__track {
+  background-color: rgba(213, 218, 224, 0.1);
+  width: 200px;
+  height: 8px;
+  display: flex;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: opacity ease-in 0.3s;
+}
+.preloader__track.is-hidden {
+  opacity: 0;
+}
+.preloader__bar {
+  background-color: #555D68;
+  height: 8px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  transform: translateX(-100%);
+  transform-origin: left;
+  animation-name: loading;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes loading {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
 .nav__list {
   padding: 0;
   margin: 0;
@@ -641,7 +733,7 @@ a {
     display: none;
   }
 }
-@media (min-resolution: 2dppx) {
+@media (min-resolution: 2ddpx) {
   .intro__image-block {
     background: url("../../images/img2@2x.png");
   }
