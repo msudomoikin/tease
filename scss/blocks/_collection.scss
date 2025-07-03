@@ -117,6 +117,8 @@
         max-width: 824px;
         height: auto;
         z-index: -1;
+        user-select: none;
+        pointer-events: none;
 
         @media screen and (max-width: 1251px) {
             opacity: 0.3;

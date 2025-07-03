@@ -62,9 +62,15 @@
         counter-increment: step-counter;
         max-width: 322px;
 
+        @include vp-1023 {
+            margin-bottom: 62px;
+        }
+
         @include vp-767 {
             margin-bottom: 24px;
         }
+
+        
 
         @media screen and (max-width: 560px) {
             align-self: center;
@@ -113,6 +119,8 @@
         right: 261px;
         z-index: 1;
         width: 588px;
+        user-select: none;
+        pointer-events: none;;
 
         @media screen and (max-width: 1406px) {
             z-index: -1;

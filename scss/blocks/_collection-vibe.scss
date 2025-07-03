@@ -1,4 +1,5 @@
 .collection-vibe {
+
     &__title {
         padding-top: 656px;
         padding-bottom: 91px;
@@ -9,20 +10,20 @@
         margin: 0;
 
         @include vp-1023 {
-            padding-top: 56px;
+            padding-top: 151px;
             padding-bottom: 45px;
         }
 
         & span {
             display: block;
         }
-        
+
     }
 
     &__subtitle {
         top: 49%;
 
-        @include vp-767 {
+        @media screen and (max-width: 1023px) {
             display: none;
         }
     }
@@ -31,10 +32,20 @@
         justify-content: space-between;
         position: relative;
         gap: 20px;
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
 
         @include vp-1023 {
-            flex-wrap: wrap;
+            gap: 0;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__read-more {
+        position: absolute;
+        
+        @include vp-1023 {
+            bottom: -54px;
         }
     }
 
@@ -42,20 +53,22 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        max-width: 665px;
+        // max-width: 49%;
     }
 
     &__image {
         padding-top: 180px;
         margin-bottom: 75px;
-        
-        @include vp-767 {
+        user-select: none;
+        pointer-events: none;
+
+        @include vp-1023 {
             padding-top: 0;
             margin-bottom: 0;
             position: absolute;
             z-index: -1;
             opacity: 0.3;
-            top: 200px;
+            top: 70px;
         }
     }
 

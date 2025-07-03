@@ -54,6 +54,8 @@
         z-index: 2;
         font-weight: 400;
         right: 0;
+        user-select: none;
+        pointer-events: none;
 
         @include vp-1023 {
             z-index: -1;

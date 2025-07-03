@@ -1,5 +1,5 @@
 .footer {
-    padding-top: 104px;
+    
     padding-bottom: 19px;
 
     &__nav {
@@ -67,7 +67,6 @@
     }
 
     & .nav__list {
-
         @include vp-1023 {
             gap: 50px;
         }

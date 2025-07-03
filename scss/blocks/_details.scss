@@ -1,6 +1,11 @@
 .details {
-    padding-top: 147px;
+    padding-top: 146px;
+    padding-bottom: 106px;
     overflow: hidden;
+
+    @include vp-1023 {
+        margin-bottom: 160px;
+    }
 
     &__wrapper {
         position: relative;
@@ -31,7 +36,7 @@
 
         @include vp-767 {
             font-size: 65px;
-            margin-bottom: 62px;
+            margin-bottom: 45px;
         }
     }
 
@@ -63,7 +68,6 @@
     }
 
     &__item {
-        position: relative;
         counter-increment: step-counter;
 
         //list marker
@@ -88,6 +92,22 @@
 
         @media screen and (max-width:1317px) {
             flex-wrap: wrap;
+        }
+    }
+
+    &__image {
+        user-select: none;
+        pointer-events: none;
+
+        @include vp-767 {
+            margin: 0 auto;
+        }
+    }
+
+    &__read-more {
+        @media screen and (max-width:1317px) {
+            position: absolute;
+            bottom: -54px;
         }
     }
 }
