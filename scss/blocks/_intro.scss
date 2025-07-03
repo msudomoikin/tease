@@ -59,7 +59,11 @@
         }
 
         @include vp-767 {
-            font-size: 48px;
+            font-size: 45px;
+        }
+
+        @media screen and (max-width: 375px) {
+            font-size: 38px;
         }
 
         span {
