@@ -8,9 +8,9 @@
     &__wrapper {
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
 
-        @include vp-767 {
+        @include vp-1023 {
+            justify-content: center;
             flex-wrap: wrap;
         }
     }
@@ -20,11 +20,13 @@
     }
 
     &__title {
-        margin: 0 0 91px;
+        margin: 0 0 90px;
+        padding-top: 40px;
         font-size: 85px;
         font-family: $ff-rasfire;
         color: $color-white;
         font-weight: 100;
+
 
         @include vp-767 {
             font-size: 45px;
@@ -38,8 +40,9 @@
         span:first-child {
             position: relative;
             left: -436px;
+            top: 8px;
 
-            @include vp-767 {
+            @include vp-1023 {
                 left: 0;
             }
         }
@@ -53,8 +56,8 @@
         letter-spacing: -0.02em;
         display: block;
 
-        &:first-of-type {
-            margin-bottom: 25px;
+        &:first-child {
+            margin-bottom: 23px;
         }
     }
 }

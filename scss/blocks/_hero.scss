@@ -1,9 +1,12 @@
 .hero {
-    overflow: hidden;
 
     &__wrapper {
         min-height: 832px;
         position: relative;
+
+        @include vp-1023 {
+            min-height: 600px;
+        }
 
         @include vp-767 {
             min-height: 472px;
@@ -21,8 +24,18 @@
         line-height: 0.55;
         font-weight: 100;
 
+        @include vp-1023 {
+            font-size: 300px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
         @include vp-767 {
-            font-size: 140px;
+            font-size: 130px;
+        }
+
+        @media screen and (max-width: 450px) {
+            font-size: 180px;
         }
     }
 
@@ -36,7 +49,11 @@
         z-index: 2;
         font-weight: 400;
         right: 0;
-        
+
+        @include vp-1023 {
+            z-index: -1;
+        }
+
         @include vp-767 {
             position: relative;
         }

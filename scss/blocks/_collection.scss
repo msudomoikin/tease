@@ -11,7 +11,7 @@
         color: $color-white;
         font-size: 85px;
         margin: 0;
-        padding: 246px 0 245px 0;
+        padding: 252px 0 245px 0;
         line-height: 0.8;
         font-weight: 100;
 
@@ -34,7 +34,7 @@
     }
 
     &__subtitle {
-        top: 17%;
+        top: 18%;
 
         @include vp-767 {
             display: none;
@@ -74,7 +74,8 @@
         letter-spacing: -0.02em;
 
         &--pt{
-            padding-top: 10px;
+            padding-top: 14px;
+
             @include vp-767 {
                 padding-top: 22px;
                 padding-bottom: 22px;
@@ -82,7 +83,7 @@
         }
 
         &--mb{
-            margin-bottom: 22px;
+            margin-bottom: 26px;
         }
     }
 

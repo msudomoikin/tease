@@ -14,13 +14,13 @@
         align-items: flex-start;
         gap: 20px;
 
-        @include vp-767 {
+        @include vp-1023 {
             flex-wrap: wrap;
         }
     }
 
     &__subtitle {
-        top: 72%;
+        top: 73%;
 
         @include vp-767 {
             display: none;
@@ -104,10 +104,10 @@
 
     &__image {
         position: absolute;
-        bottom: -56px;
-        right: 279px;
+        bottom: -78px;
+        right: 261px;
         z-index: 1;
-        width: 557px;
+        width: 588px;
 
         @include vp-767 {
             display: none;

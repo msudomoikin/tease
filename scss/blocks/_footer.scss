@@ -26,7 +26,11 @@
     &__links-wrapper {
         justify-content: flex-end;
         display: flex;
-        gap: 104px;
+        gap: 110px;
+
+        @include vp-1023 {
+            gap: 52px;
+        }
 
         @include vp-767 {
             display: flex;
@@ -38,12 +42,16 @@
     }
 
     &__links-list {
-        padding: 9px;
+        padding: 12px 0 0 0;
         margin: 0;
         gap: 14px;
         list-style-type: none;
         display: flex;
         flex-direction: column;
+
+        &:last-child {
+            padding-right: 17px;
+        }
 
         @include vp-767 {
             padding: 0;
@@ -55,6 +63,11 @@
     }
 
     & .nav__list {
+
+        @include vp-1023 {
+            gap: 50px;
+        }
+
         @include vp-767 {
             gap: 14px;
             display: flex;
