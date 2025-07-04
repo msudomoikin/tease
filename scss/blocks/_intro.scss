@@ -12,18 +12,15 @@
     &__image-block {
         width: 434px;
         height: 535px;
-        background: url("../../images/img2.png");
-        background-size: contain;
-        background-repeat: no-repeat;
 
         @media screen and (max-width: 1022px) {
             display: none;
         }
+    }
 
-
-        @media (min-resolution: 2ddpx) {
-            background: url("../../images/img2@2x.png");
-        }
+    &__image {
+        position: relative;
+        z-index: 2;
     }
 
     &__wrapper {
