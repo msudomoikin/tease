@@ -18,6 +18,8 @@ window.addEventListener('DOMContentLoaded', async () => {
     } catch (error) {
         console.error('Initialization failed:', error);
         preloader.loaded = true; // Still hide preloader even if error occurs
+    } finally {
+        preloader
     }
 
 })
