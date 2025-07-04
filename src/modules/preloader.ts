@@ -39,7 +39,7 @@ export class Preloader {
 
 
         this.scrollLock.enableScrolling();
-        console.log('Preloader hidden');
+        console.log('Loaded ✨');
     }
 
     private startLoadingTimeout(): void {
@@ -59,7 +59,7 @@ export class Preloader {
 
         this.scrollLock.disableScrolling();
         this.element.classList.add('is-loading');
-        console.log(`Preloader duration: ${this.duration}ms`);
         this.listenForPageLoad();
     }
+
 }

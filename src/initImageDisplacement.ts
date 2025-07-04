@@ -1,18 +1,28 @@
 import { Application, Assets, Container, DisplacementFilter, Sprite } from 'pixi.js';
+import displacementMap from '../images/displacement_map_repeat.jpg';
 
-export const initHeroImageDisplacement = async () => {
-  // Get the image element from your markup first
-  const heroImage = document.querySelector('.hero__image') as HTMLImageElement;
+export const initImageDisplacement = async (
+  selector: string,
+  scaleX: number = 60,
+  scaleY: number = 30
+) => {
+  // Get the image element from your markup using the provided selector
+  const targetImage = document.querySelector(selector) as HTMLImageElement;
+
+  if (!targetImage) {
+    console.error(`No image found with selector: ${selector}`);
+    return;
+  }
 
   // Wait for the image to load if it hasn't already
-  if (!heroImage.complete) {
+  if (!targetImage.complete) {
     await new Promise((resolve) => {
-      heroImage.onload = resolve;
+      targetImage.onload = resolve;
     });
   }
 
   // Get the exact position and size of the image
-  const imageRect = heroImage.getBoundingClientRect();
+  const imageRect = targetImage.getBoundingClientRect();
 
   // Create a new application with the exact size of the image
   const app = new Application();
@@ -26,12 +36,10 @@ export const initHeroImageDisplacement = async () => {
 
   // Position the canvas exactly where the image is
   const canvas = app.canvas as HTMLCanvasElement;
-
-  canvas.classList.add('hero__image')
+  canvas.classList.add(selector.replace('.', '')); // Add class without the dot
 
   // Insert the canvas right after the image in the DOM
-  heroImage.insertAdjacentElement('afterend', canvas);
-  const displacementMan = '../images/displacement_map_repeat.jpg'
+  targetImage.insertAdjacentElement('afterend', canvas);
 
 
   // Create container
@@ -40,26 +48,26 @@ export const initHeroImageDisplacement = async () => {
 
   // Load assets
   await Assets.load([
-    displacementMan,
-    heroImage.src
+    displacementMap,
+    targetImage.src
   ]);
 
   // Create sprite from your image (full size of the canvas)
-  const imageSprite = Sprite.from(heroImage.src);
+  const imageSprite = Sprite.from(targetImage.src);
   imageSprite.width = imageRect.width;
   imageSprite.height = imageRect.height;
   container.addChild(imageSprite);
 
   // Create displacement sprite
-  const displacementSprite = Sprite.from(displacementMan);
+  const displacementSprite = Sprite.from(displacementMap);
   displacementSprite.texture.source.addressMode = 'repeat';
   displacementSprite.width = imageRect.width;
   displacementSprite.height = imageRect.height;
 
-  // Create and apply displacement filter
+  // Create and apply displacement filter with customizable scale
   const displacementFilter = new DisplacementFilter({
     sprite: displacementSprite,
-    scale: { x: 60, y: 30 },
+    scale: { x: scaleX, y: scaleY },
     antialias: true,
   });
   displacementFilter.padding = 10;
@@ -67,33 +75,9 @@ export const initHeroImageDisplacement = async () => {
   imageSprite.filters = [displacementFilter];
   app.stage.addChild(displacementSprite);
 
-  // actually dont need it, rubber especially w/o debounce
-
-  // Handle window resize
-  // const repositionElements = () => {
-  //   const newRect = heroImage.getBoundingClientRect();
-
-  //   // Resize the renderer
-  //   app.renderer.resize(newRect.width, newRect.height);
-
-  //   // Reposition the canvas
-  //   canvas.style.left = `${newRect.left}px`;
-  //   canvas.style.top = `${newRect.top}px`;
-  //   canvas.style.width = `${newRect.width}px`;
-  //   canvas.style.height = `${newRect.height}px`;
-
-  //   // Resize sprites
-  //   imageSprite.width = newRect.width;
-  //   imageSprite.height = newRect.height;
-  //   displacementSprite.width = newRect.width;
-  //   displacementSprite.height = newRect.height;
-  // };
-
-  // window.addEventListener('resize', repositionElements);
-
   // Hide the original image
-  heroImage.style.visibility = 'hidden';
-  heroImage.style.display = 'none';
+  targetImage.style.visibility = 'hidden';
+  targetImage.style.display = 'none';
 
   // Animation loop
   app.ticker.add(() => {
